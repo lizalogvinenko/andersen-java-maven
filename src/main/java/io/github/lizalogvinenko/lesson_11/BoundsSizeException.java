@@ -3,7 +3,6 @@ package io.github.lizalogvinenko.lesson_11;
 import java.util.Scanner;
 
 public class BoundsSizeException {
-
     public static void boundsSizeException(String[][] array) throws MyArraySizeException {
         int sum = 0;
         Scanner scanner = new Scanner(System.in);
