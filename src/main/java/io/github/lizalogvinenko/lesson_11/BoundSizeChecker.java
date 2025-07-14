@@ -1,11 +1,8 @@
 package io.github.lizalogvinenko.lesson_11;
 
-import java.util.Scanner;
-
-public class BoundsSizeException {
-    public static void boundsSizeException(String[][] array) throws MyArraySizeException {
+public class BoundSizeChecker {
+    public static int boundSizeChecker(String[][] array) {
         int sum = 0;
-        Scanner scanner = new Scanner(System.in);
 
         if (array.length != 4) {
             throw new MyArraySizeException("Array must be exactly 4 rows");
@@ -19,9 +16,7 @@ public class BoundsSizeException {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                System.out.print("Enter a value for position [" + i + "][" + j + "]: ");
-                String input = scanner.nextLine();
-                array[i][j] = input;
+                String input = array[i][j];
 
                 try {
                     int elementToInt = Integer.parseInt(input);
@@ -32,8 +27,6 @@ public class BoundsSizeException {
             }
         }
 
-        scanner.close();
-
-        System.out.println(sum);
+        return sum;
     }
 }
