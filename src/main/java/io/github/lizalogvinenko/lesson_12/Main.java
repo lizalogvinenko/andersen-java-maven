@@ -16,6 +16,7 @@ public class Main {
 
         WriterCsv.writeFile(fileName, appData);
 
-        ReaderCsv.readFile(fileName, appData);
+        AppData result = ReaderCsv.readFile(fileName);
+        System.out.println(result);
     }
 }
