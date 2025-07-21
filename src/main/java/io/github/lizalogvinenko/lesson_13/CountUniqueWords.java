@@ -20,6 +20,7 @@ public class CountUniqueWords {
                 map.put(word, 1);
             }
         }
+
         return map;
     }
 }
